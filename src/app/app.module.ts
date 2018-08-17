@@ -2,13 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { TileComponent } from './tile/tile.component';
+
+import { MatCardModule,  } from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TileComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, 
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
