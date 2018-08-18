@@ -4,4 +4,5 @@ export class Tile {
     subtitle: string;
     avatar: string;
     content: string;
+    href: string;
 }

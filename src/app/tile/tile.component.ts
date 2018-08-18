@@ -12,32 +12,35 @@ export class TileComponent implements OnInit {
       id: 1,
       title: 'Home',
       subtitle: 'where the food is',
-      avatar: '',
-      content: 'This is some short content.'
+      avatar: 'home',
+      content: 'This is some short content.',
+      href: ''
     },
     {
-      id: 1,
+      id: 2,
       title: 'Blog',
       subtitle: 'where the goods are',
       avatar: '',
-      content: 'This is some short content.'
+      content: 'This is some short content.',
+      href: 'http://blog.mnr2015.com'
     },
     {
-      id: 1,
+      id: 3,
       title: 'Dev/Staging',
       subtitle: 'Subtitle',
       avatar: '',
-      content: 'This is some short content.'
+      content: 'This is some short content.',
+      href: 'http://dev.mnr2015.com'
     },
-    
+    {
+      id: 4,
+      title: 'Expo',
+      subtitle: 'Subtitle',
+      avatar: '',
+      content: 'This is some short content.',
+      href: 'http://dev2.mnr2015.com'
+    },
   ]
-  tile: Tile = {
-    id: 1,
-    title: 'Test',
-    subtitle: 'Subtitle',
-    avatar: '',
-    content: 'This is some short content.'
-  };
 
   constructor() { }
 
