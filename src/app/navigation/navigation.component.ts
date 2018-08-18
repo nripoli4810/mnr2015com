@@ -21,4 +21,5 @@ export class NavigationComponent implements OnInit {
   toggle() {
     this.opened = !this.opened;
   }
+
 }

@@ -8,12 +8,14 @@ import { TileComponent } from './tile/tile.component';
 import { MatCardModule, MatToolbarModule, MatGridListModule, MatSidenavModule, MatListModule, MatIcon, MatIconModule } from '@angular/material';
 
 import { NavigationComponent } from './navigation/navigation.component';
+import { CallbackPipe } from './callback.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     TileComponent,
-    NavigationComponent
+    NavigationComponent,
+    CallbackPipe
   ],
   imports: [
     BrowserModule,

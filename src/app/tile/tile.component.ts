@@ -17,4 +17,7 @@ export class TileComponent implements OnInit {
   ngOnInit() {
   }
 
+  filterFeaturedTiles(tile: Tile) {
+    return tile.featured
+  }
 }
