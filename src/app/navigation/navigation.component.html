@@ -1,8 +1,8 @@
-<mat-sidenav-container class="example-container">
+<mat-sidenav-container>
   <mat-sidenav #sidenav mode="over" [(opened)]="opened">
     <mat-list *ngFor="let tile of mockTiles | callback: filterDisabledMenuOptions">
       <mat-list-item (click)='onMenuClick(tile)'>
-          <mat-icon>{{tile.avatar}}</mat-icon>
+        <mat-icon>{{tile.avatar}}</mat-icon>
         <button mat-button >
           {{tile.title}}
         </button>
@@ -14,6 +14,6 @@
       <button id='menuButton' mat-button (click)="toggle()"><mat-icon>menu</mat-icon></button>
       <span>Home</span>
     </mat-toolbar>
-    <app-tile></app-tile>
+    
   </mat-sidenav-content>
 </mat-sidenav-container>
