@@ -13,6 +13,7 @@ export class NavigationComponent implements OnInit {
 
   constructor() {
     this.mockTiles = MockTiles;
+    this.opened = true;
   }
 
   ngOnInit() {
@@ -22,4 +23,11 @@ export class NavigationComponent implements OnInit {
     this.opened = !this.opened;
   }
 
+  onMenuClick(t: Tile) {
+    window.location.href = t.href;
+  }
+
+  filterDisabledMenuOptions(t: Tile) {
+    return !t.hidden;
+  }
 }

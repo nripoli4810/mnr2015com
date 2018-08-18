@@ -6,4 +6,6 @@ export class Tile {
     content: string;
     href: string;
     featured: boolean;
+    img: string;
+    hidden: boolean;
 }

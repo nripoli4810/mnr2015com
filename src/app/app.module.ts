@@ -5,7 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppComponent } from './app.component';
 import { TileComponent } from './tile/tile.component';
 
-import { MatCardModule, MatToolbarModule, MatGridListModule, MatSidenavModule, MatListModule, MatIcon, MatIconModule } from '@angular/material';
+import { MatCardModule, MatToolbarModule, MatGridListModule,
+  MatSidenavModule, MatListModule, MatButtonModule, MatIconModule } from '@angular/material';
 
 import { NavigationComponent } from './navigation/navigation.component';
 import { CallbackPipe } from './callback.pipe';
@@ -19,13 +20,14 @@ import { CallbackPipe } from './callback.pipe';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     MatCardModule,
     MatToolbarModule,
     MatGridListModule,
     MatSidenavModule,
-    BrowserAnimationsModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

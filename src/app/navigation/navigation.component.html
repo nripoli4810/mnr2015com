@@ -1,18 +1,19 @@
 <mat-sidenav-container class="example-container">
-  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
-    <mat-list *ngFor="let tile of mockTiles">
-      <mat-list-item> <a href='{{tile.href}}'>{{tile.title}}</a> </mat-list-item>
+  <mat-sidenav #sidenav mode="over" [(opened)]="opened">
+    <mat-list *ngFor="let tile of mockTiles | callback: filterDisabledMenuOptions">
+      <mat-list-item (click)='onMenuClick(tile)'>
+          <mat-icon>{{tile.avatar}}</mat-icon>
+        <button mat-button >
+          {{tile.title}}
+        </button>
+      </mat-list-item>
     </mat-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar>
-      <a id='menuButton' (click)="toggle()">
-            <mat-icon>menu</mat-icon>
-          </a>
+      <button id='menuButton' mat-button (click)="toggle()"><mat-icon>menu</mat-icon></button>
       <span>Home</span>
     </mat-toolbar>
-    <div id="tileWrapper">
-      <app-tile></app-tile>
-    </div>
+    <app-tile></app-tile>
   </mat-sidenav-content>
 </mat-sidenav-container>
