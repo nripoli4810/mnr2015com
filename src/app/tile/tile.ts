@@ -5,4 +5,5 @@ export class Tile {
     avatar: string;
     content: string;
     href: string;
+    featured: boolean;
 }

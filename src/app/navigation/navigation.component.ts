@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Tile } from '../tile/tile';
+import { MockTiles } from '../tile/mock-tiles'
 
 @Component({
   selector: 'app-navigation',
@@ -7,21 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
   opened: boolean;
+  mockTiles: Tile[];
 
-  constructor() { }
+  constructor() {
+    this.mockTiles = MockTiles;
+  }
 
   ngOnInit() {
   }
 
   toggle() {
-    console.log("toggle called");
     this.opened = !this.opened;
-
-    // this.isNavVisible = !this.isNavVisible;
-    // if (this.isNavVisible) {
-    //   this.open.emit(null);
-    // } else {
-    //   this.close.emit(null);
-    // }
   }
 }

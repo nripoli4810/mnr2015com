@@ -1,9 +1,7 @@
 <mat-sidenav-container class="example-container">
   <mat-sidenav #sidenav mode="side" [(opened)]="opened">
-    <mat-list>
-      <mat-list-item> Pepper </mat-list-item>
-      <mat-list-item> Salt </mat-list-item>
-      <mat-list-item> Paprika </mat-list-item>
+    <mat-list *ngFor="let tile of mockTiles">
+      <mat-list-item> <a href='{{tile.href}}'>{{tile.title}}</a> </mat-list-item>
     </mat-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -13,6 +11,8 @@
           </a>
       <span>Home</span>
     </mat-toolbar>
-    <app-tile></app-tile>
+    <div id="tileWrapper">
+      <app-tile></app-tile>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

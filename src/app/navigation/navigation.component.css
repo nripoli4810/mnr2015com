@@ -1,3 +1,16 @@
 #menuButton{
     margin-right: 15px;
 }
+
+.mat-sidenav {
+    min-width: 150px;
+}
+
+.mat-list-item:hover {
+    background-color: aqua;
+}
+
+.tileWrapper {
+    width: 100%;
+    background-color: purple;
+}
