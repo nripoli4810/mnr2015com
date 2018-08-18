@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
-  isOpen: boolean;
+  opened: boolean;
 
   constructor() { }
 
@@ -15,6 +15,8 @@ export class NavigationComponent implements OnInit {
 
   toggle() {
     console.log("toggle called");
+    this.opened = !this.opened;
+
     // this.isNavVisible = !this.isNavVisible;
     // if (this.isNavVisible) {
     //   this.open.emit(null);
