@@ -10,13 +10,18 @@ import { MatCardModule, MatToolbarModule, MatGridListModule,
 
 import { NavigationComponent } from './navigation/navigation.component';
 import { CallbackPipe } from './callback.pipe';
+import { AppRoutingModule } from './/app-routing.module';
+import { BabyModule } from './baby/baby.module';
+import { GalleriesModule } from './galleries/galleries.module';
+import { NotFoundComponent } from './not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TileComponent,
     NavigationComponent,
-    CallbackPipe
+    CallbackPipe,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,10 @@ import { CallbackPipe } from './callback.pipe';
     MatSidenavModule,
     MatListModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    AppRoutingModule,
+    GalleriesModule,
+    BabyModule
   ],
   providers: [],
   bootstrap: [AppComponent]
