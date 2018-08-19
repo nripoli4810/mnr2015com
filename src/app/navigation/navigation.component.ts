@@ -13,7 +13,6 @@ export class NavigationComponent implements OnInit {
 
   constructor() {
     this.mockTiles = MockTiles;
-    this.opened = true;
   }
 
   ngOnInit() {

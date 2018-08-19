@@ -1,7 +1,6 @@
 .mat-sidenav {
     min-width: 150px;
     height: 100%;
-    background-color: #f5f5f5;
 }
 
 .mat-sidenav-content {
@@ -17,3 +16,15 @@
     width: 100%;
     text-align: left;
 }
+
+.mat-toolbar img {
+    height: 64px;
+    width: 64px;
+    padding-top: 8px;
+}
+
+.fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+
