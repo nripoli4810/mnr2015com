@@ -1,11 +1,9 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="over" [(opened)]="opened" >
-    <mat-list *ngFor="let tile of mockTiles | callback: filterDisabledMenuOptions">
+    <mat-list *ngFor="let tile of menuTiles">
       <mat-list-item (click)='onMenuClick(tile)'>
-        <mat-icon color="accent">{{tile.avatar}}</mat-icon>
         <button mat-button color="accent">
-          {{tile.title}}
-        </button>
+          <mat-icon color="accent">{{tile.avatar}}</mat-icon>{{tile.title}}</button>
       </mat-list-item>
     </mat-list>
   </mat-sidenav>
@@ -16,14 +14,14 @@
           <mat-icon>menu</mat-icon>
         </button>
       </span>
-      <span>
+      <span class="pageTitle">
       Home
     </span>
       <span class="fill-remaining-space"></span>
       <span>
-        <img src="../../assets/logo3.png" />
+        <img id="logo" #logo src="../../assets/logo3.png" />
       </span>
     </mat-toolbar>
-
+    <!-- todo: inject featured tiles here -->
   </mat-sidenav-content>
 </mat-sidenav-container>

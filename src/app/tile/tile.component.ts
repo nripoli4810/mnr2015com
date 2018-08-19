@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MockTiles } from '../tile/mock-tiles'
+import { MockTiles } from '../mock/tiles';
 import { Tile } from './tile';
 
 @Component({

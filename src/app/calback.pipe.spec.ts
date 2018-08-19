@@ -8,17 +8,6 @@ describe('CallbackPipe', () => {
   });
 });
 
-describe('CallbackPipe', () => {
-  it('filters tile by featured propertyng te', () => {
-    const pipe = new CallbackPipe();
-    var result = pipe.transform(arrayToFilter,
-      (t: Tile) => {
-        return t.featured;
-    });
-    expect(result).toContain(1);
-  });
-});
-
 const arrayToFilter: Tile[] = [
   {
     id: 1,
@@ -38,4 +27,16 @@ const arrayToFilter: Tile[] = [
     title: '',
     featured: false
   }
-]
+];
+
+describe('CallbackPipe', () => {
+  it('filters tile by featured propertyng te', () => {
+    const pipe = new CallbackPipe();
+    const result = pipe.transform(arrayToFilter,
+      (t: Tile) => {
+        return t.featured;
+    });
+    expect(result).toContain(1);
+  });
+});
+

@@ -1,21 +1,28 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeService } from '../services/home.service';
 import { Tile } from '../tile/tile';
-import { MockTiles } from '../tile/mock-tiles'
 
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.css']
+  styleUrls: ['./navigation.component.css'],
+  providers: [
+    HomeService,
+  ]
 })
 export class NavigationComponent implements OnInit {
   opened: boolean;
-  mockTiles: Tile[];
+  featuredTiles: Tile[];
+  menuTiles: any;
 
-  constructor() {
-    this.mockTiles = MockTiles;
+  constructor(private homeService: HomeService) {
   }
 
   ngOnInit() {
+    this.homeService.GetHomeTiles()
+      .subscribe(tiles => this.featuredTiles = tiles.filter(t => t.featured));
+    this.homeService.GetHomeTiles()
+      .subscribe(tiles => this.menuTiles = tiles.filter(t => !t.hidden));
   }
 
   toggle() {
@@ -23,10 +30,6 @@ export class NavigationComponent implements OnInit {
   }
 
   onMenuClick(t: Tile) {
-    window.location.href = t.href;
-  }
-
-  filterDisabledMenuOptions(t: Tile) {
-    return !t.hidden;
+    // window.location.href = t.href;
   }
 }

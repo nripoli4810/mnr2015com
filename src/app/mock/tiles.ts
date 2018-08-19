@@ -1,4 +1,4 @@
-import { Tile } from './tile';
+import { Tile } from '../tile/tile';
 
 export const MockTiles: Tile[] = [
     {
@@ -47,7 +47,7 @@ export const MockTiles: Tile[] = [
     },
     {
         id: 5,
-        title: 'Dev/Staging',
+        title: 'Staging',
         subtitle: 'Subtitle',
         avatar: 'code',
         content: 'This is some short content.',
