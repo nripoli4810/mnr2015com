@@ -1,7 +1,7 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="over" [(opened)]="opened" >
     <mat-list *ngFor="let t of menuTiles">
-      <mat-list-item routerLink='{{t.href}}'>
+      <mat-list-item routerLink='{{t.href}}' (click)="toggle()">
         <button mat-button color="accent">
           <mat-icon color="accent">{{t.avatar}}</mat-icon>{{t.title}}</button>
       </mat-list-item>

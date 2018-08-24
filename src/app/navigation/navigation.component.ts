@@ -28,8 +28,4 @@ export class NavigationComponent implements OnInit {
   toggle() {
     this.opened = !this.opened;
   }
-
-  onMenuClick(t: Tile) {
-    // window.location.href = t.href;
-  }
 }
