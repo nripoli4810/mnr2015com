@@ -14,6 +14,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { BabyModule } from './baby/baby.module';
 import { GalleriesModule } from './galleries/galleries.module';
 import { NotFoundComponent } from './not-found.component';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NotFoundComponent } from './not-found.component';
     TileComponent,
     NavigationComponent,
     CallbackPipe,
-    NotFoundComponent
+    NotFoundComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
