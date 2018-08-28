@@ -7,7 +7,7 @@
       </mat-list-item>
     </mat-list>
   </mat-sidenav>
-  <mat-sidenav-content>
+  <mat-sidenav-content #sideNavContainer>
     <mat-toolbar color="primary">
       <span>
         <button id="menuButton" mat-button (click)="toggle()">
@@ -22,6 +22,7 @@
         <img id="logo" #logo src="../../assets/logo3.png" />
       </span>
     </mat-toolbar>
+    <router-outlet></router-outlet>
     <!-- todo: inject featured tiles here -->
   </mat-sidenav-content>
 </mat-sidenav-container>
