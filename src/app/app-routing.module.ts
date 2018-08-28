@@ -3,8 +3,8 @@ import { Routes, RouterModule, ActivatedRouteSnapshot } from '@angular/router';
 
 import { GalleriesComponent } from './galleries/galleries.component';
 import { BabyComponent } from './baby/baby.component';
-import { NotFoundComponent } from './not-found.component';
 import { LandingComponent } from './landing/landing.component';
+import { RedirectedComponent } from './redirected/redirected.component';
 
 const externalUrlRedirectResolver = new InjectionToken('externalUrlRedirectResolver');
 
@@ -14,11 +14,11 @@ const routes: Routes = [
   { path: 'galleries', component: GalleriesComponent },
   { path: 'baby', component: BabyComponent },
   {
-    path: 'blog', resolve: { url: externalUrlRedirectResolver }, component: NotFoundComponent,
+    path: 'blog', resolve: { url: externalUrlRedirectResolver }, component: RedirectedComponent,
     data: { externalUrl: 'http://blog.mnr2015.com' }
   },
   {
-    path: 'dev', resolve: { url: externalUrlRedirectResolver }, component: NotFoundComponent,
+    path: 'dev', resolve: { url: externalUrlRedirectResolver }, component: RedirectedComponent,
     data: { externalUrl: 'http://dev.mnr2015.com' }
   },
 ];

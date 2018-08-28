@@ -15,6 +15,7 @@ import { BabyModule } from './baby/baby.module';
 import { GalleriesModule } from './galleries/galleries.module';
 import { NotFoundComponent } from './not-found.component';
 import { LandingComponent } from './landing/landing.component';
+import { RedirectedComponent } from './redirected/redirected.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LandingComponent } from './landing/landing.component';
     NavigationComponent,
     CallbackPipe,
     NotFoundComponent,
-    LandingComponent
+    LandingComponent,
+    RedirectedComponent
   ],
   imports: [
     BrowserModule,
