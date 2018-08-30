@@ -25,7 +25,7 @@ import { RedirectedComponent } from './redirected/redirected.component';
     CallbackPipe,
     NotFoundComponent,
     LandingComponent,
-    RedirectedComponent
+    RedirectedComponent,
   ],
   imports: [
     BrowserModule,

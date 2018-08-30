@@ -1,0 +1,9 @@
+.redirectCard {
+    max-width: 400px;
+    margin: 0px auto;
+}
+
+.redirectCardWrapper {
+    flex: 1 1 auto;
+    align-content: center;
+}

@@ -1,0 +1,18 @@
+.tenPercentMargin {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px
+}
+
+.tileBottomMargin {
+    margin-bottom: 5px;
+}
+
+.welcomeMessage {
+    background-color: lightgreen;
+    color: black;
+}
+
+.largeTitle h1 {
+    font-size: 14em;
+}
