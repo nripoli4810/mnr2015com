@@ -2,23 +2,19 @@
     margin-left: 10%;
     margin-right: 10%;
     padding-top: 10px;
-    background-color: beige;
-    color: black;
 }
 
 .divWrapper {
     margin: 20px 20px;
     padding: 5px 20px;
-
-}
-.lightSteelBlue {
-    background-color: lightsteelblue;
 }
 
-.inline {
-    /* display: inline-block; */
-}
 
 .center {
     text-align: center;
+}
+
+.babyCards {
+    background-color: #15b8db;
+    color: white;
 }

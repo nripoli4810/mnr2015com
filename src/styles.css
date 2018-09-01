@@ -15,3 +15,36 @@ body {
 .pageTitle {
     margin-left: 5px;
 }
+
+
+.paleCornerflowerBlue {
+    background-color: #A6CDF0;
+}
+
+.azureishWhite {
+    background-color: #CFDFF7;
+}
+
+.ghostWhite {
+    background-color: #F9F6FF;
+}
+
+.champagne {
+    background-color: #F3E5D2;
+}
+
+.oceanBoatBlue {
+    background-color: #0276c0;
+}
+
+.richElectricBlue {
+    background-color: #00a8d4;
+}
+
+.batteryChargedBlue {
+    background-color: #15b8db;
+}
+
+.classicRose {
+    background-color: #edd3ea;
+}
