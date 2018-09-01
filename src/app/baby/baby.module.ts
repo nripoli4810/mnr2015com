@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BabyComponent } from './welcome/baby.component';
-import { MatGridListModule, MatListModule, MatButtonModule } from '@angular/material';
+import { MatGridListModule, MatListModule, MatButtonModule, MatExpansionModule } from '@angular/material';
 import { SharedComponentsModule } from '../shared/shared.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
@@ -14,7 +14,7 @@ import { BabyNavigationComponent } from './baby-navigation/baby-navigation.compo
 @NgModule({
   imports: [
     CommonModule,
-    MatGridListModule, MatListModule, MatButtonModule,
+    MatGridListModule, MatListModule, MatButtonModule, MatExpansionModule,
     SharedComponentsModule,
     FlexLayoutModule,
     RouterModule

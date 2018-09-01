@@ -1,4 +1,4 @@
-import { Tile } from '../tile/tile';
+import { Tile } from '../models/tile';
 
 export const MockTiles: Tile[] = [
     {

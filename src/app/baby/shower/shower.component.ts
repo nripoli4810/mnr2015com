@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Shower } from '../../models/shower';
+import { BabyService } from '../../services/baby.service';
 
 @Component({
   selector: 'app-shower',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowerComponent implements OnInit {
 
-  constructor() { }
+  mockShowers: Shower[];
+
+  constructor(private babyService: BabyService) {
+  }
 
   ngOnInit() {
+    this.babyService.GetShowerInformation()
+      .subscribe(showers => this.mockShowers = showers);
   }
 
 }

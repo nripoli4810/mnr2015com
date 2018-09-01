@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MockTiles } from '../mock/tiles';
 import { Observable, of } from 'rxjs';
-import { Tile } from '../tile/tile';
+import { Tile } from '../models/tile';
 
 @Injectable({
   providedIn: 'root'

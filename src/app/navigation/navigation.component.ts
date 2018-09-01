@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from '../services/home.service';
-import { Tile } from '../tile/tile';
+import { Tile } from '../models/tile';
 
 @Component({
   selector: 'app-navigation',

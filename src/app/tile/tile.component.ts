@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MockTiles } from '../mock/tiles';
-import { Tile } from './tile';
+import { Tile } from '../models/tile';
 
 @Component({
   selector: 'app-tile',

@@ -1,3 +1,26 @@
-<p>
-  shower works!
-</p>
+<div>
+  <div>
+    
+  </div>
+  <mat-expansion-panel *ngFor="let s of mockShowers">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{s.title}}
+      </mat-panel-title>
+      <mat-panel-description>
+        <span>{{s.date}}, {{s.time}}</span>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div fxLayout="row" fxLayout.lt-md="column">
+      <div style="min-width: 250px">
+        {{s.host.firstName}} {{s.host.lastName}}<br />
+        {{s.host.contact}} <br />
+        {{s.host.address.street1}} <br />
+        {{s.host.address.city}}, {{s.host.address.state}} {{s.host.address.zip}}
+      </div>
+      <div>
+        {{s.content}}
+      </div>
+    </div>
+  </mat-expansion-panel>
+</div>
