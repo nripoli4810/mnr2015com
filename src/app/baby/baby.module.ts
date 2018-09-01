@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BabyComponent } from './welcome/baby.component';
 import { MatGridListModule, MatListModule, MatButtonModule, MatExpansionModule } from '@angular/material';
 import { SharedComponentsModule } from '../shared/shared.module';
-import {FlexLayoutModule} from '@angular/flex-layout';
+// import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { ShowerComponent } from './shower/shower.component';
 import { RegistryComponent } from './registry/registry.component';
@@ -16,7 +16,7 @@ import { BabyNavigationComponent } from './baby-navigation/baby-navigation.compo
     CommonModule,
     MatGridListModule, MatListModule, MatButtonModule, MatExpansionModule,
     SharedComponentsModule,
-    FlexLayoutModule,
+    // FlexLayoutModule,
     RouterModule
   ],
   declarations: [BabyComponent, ShowerComponent, RegistryComponent, BabyLandingComponent, BabyNavigationComponent],
