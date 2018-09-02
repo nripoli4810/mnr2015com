@@ -16,7 +16,7 @@ import { BabyNavigationComponent } from './baby-navigation/baby-navigation.compo
     CommonModule,
     MatGridListModule, MatListModule, MatButtonModule, MatExpansionModule,
     SharedComponentsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
     RouterModule
   ],
   declarations: [BabyComponent, ShowerComponent, RegistryComponent, BabyLandingComponent, BabyNavigationComponent],
