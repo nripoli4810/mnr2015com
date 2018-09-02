@@ -16,7 +16,6 @@ body {
     margin-left: 5px;
 }
 
-
 .pageInsetWrapper {
     margin: 0px 20px;
     padding: 5px 10px;
@@ -52,4 +51,17 @@ body {
 
 .classicRose {
     background-color: #edd3ea;
+}
+
+.center{
+    text-align: center
+}
+.indent{
+    margin-left: 40px;
+}
+.underline{
+    text-decoration: underline
+}
+.rightalign{
+    text-align: right
 }
