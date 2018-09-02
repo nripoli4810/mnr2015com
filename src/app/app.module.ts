@@ -15,6 +15,7 @@ import { GalleriesModule } from './galleries/galleries.module';
 import { LandingComponent } from './landing/landing.component';
 import { RedirectedComponent } from './redirected/redirected.component';
 import { SharedComponentsModule } from './shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { SharedComponentsModule } from './shared/shared.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatToolbarModule,
