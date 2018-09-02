@@ -17,6 +17,11 @@ body {
 }
 
 
+.pageInsetWrapper {
+    margin: 0px 20px;
+    padding: 5px 10px;
+}
+
 .paleCornerflowerBlue {
     background-color: #A6CDF0;
 }
