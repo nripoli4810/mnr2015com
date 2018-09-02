@@ -1,7 +1,14 @@
-<div>
+<div class="divWrapper">
   <div>
-    
+    <h1>books instead of cards</h1>
+    <p>Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow\'s nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters. </p>
+    <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.</p>
+    <p>Trysail Sail ho Corsair red ensign hulk smartly boom jib rum gangway. Case shot Shiver me timbers gangplank crack Jennys tea cup ballast Blimey lee snow crow\'s nest rutters. Fluke jib scourge of the seven seas boatswain schooner gaff booty Jack Tar transom spirits.</p>
+    <button mat-raised-button style="margin-right: 10px">See books we already have</button>
+    <button mat-raised-button>Add a book</button>
   </div>
+  <div>
+  <h1>Shower Locations</h1>
   <mat-expansion-panel *ngFor="let s of mockShowers">
     <mat-expansion-panel-header>
       <mat-panel-title>
@@ -13,14 +20,13 @@
     </mat-expansion-panel-header>
     <div fxLayout="row" fxLayout.lt-md="column">
       <div style="min-width: 250px">
-        {{s.host.firstName}} {{s.host.lastName}}<br />
-        {{s.host.contact}} <br />
-        {{s.host.address.street1}} <br />
-        {{s.host.address.city}}, {{s.host.address.state}} {{s.host.address.zip}}
+        {{s.host.firstName}} {{s.host.lastName}}<br /> {{s.host.contact}} <br /> {{s.host.address.street1}} <br /> {{s.host.address.city}},
+        {{s.host.address.state}} {{s.host.address.zip}}
       </div>
       <div>
         {{s.content}}
       </div>
     </div>
   </mat-expansion-panel>
+</div>
 </div>
