@@ -13,7 +13,6 @@ import { CallbackPipe } from './callback.pipe';
 import { AppRoutingModule } from './/app-routing.module';
 import { BabyModule } from './baby/baby.module';
 import { GalleriesModule } from './galleries/galleries.module';
-import { NotFoundComponent } from './not-found.component';
 import { LandingComponent } from './landing/landing.component';
 import { RedirectedComponent } from './redirected/redirected.component';
 
@@ -23,7 +22,6 @@ import { RedirectedComponent } from './redirected/redirected.component';
     TileComponent,
     NavigationComponent,
     CallbackPipe,
-    NotFoundComponent,
     LandingComponent,
     RedirectedComponent,
   ],
