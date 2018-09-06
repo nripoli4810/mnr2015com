@@ -1,5 +1,5 @@
 import { CallbackPipe } from './callback.pipe';
-import { Tile } from './tile/tile';
+import { Tile } from '../models/tile';
 
 describe('CallbackPipe', () => {
   it('create an instance', () => {
@@ -16,7 +16,9 @@ const arrayToFilter: Tile[] = [
     href: '',
     subtitle: '',
     title: '',
-    featured: true
+    featured: true,
+    hidden: false,
+    img: ''
   },
   {
     id: 2,
@@ -25,7 +27,9 @@ const arrayToFilter: Tile[] = [
     href: '',
     subtitle: '',
     title: '',
-    featured: false
+    featured: false,
+    hidden: false,
+    img: ''
   }
 ];
 
