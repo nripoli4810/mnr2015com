@@ -12,15 +12,12 @@ import { Tile } from '../models/tile';
 })
 export class NavigationComponent implements OnInit {
   opened: boolean;
-  featuredTiles: Tile[];
   menuTiles: any;
 
   constructor(private homeService: HomeService) {
   }
 
   ngOnInit() {
-    this.homeService.GetHomeTiles()
-      .subscribe(tiles => this.featuredTiles = tiles.filter(t => t.featured));
     this.homeService.GetHomeTiles()
       .subscribe(tiles => this.menuTiles = tiles.filter(t => !t.hidden));
   }
