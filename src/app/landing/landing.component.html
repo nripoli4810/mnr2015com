@@ -1,3 +1,15 @@
-<p>
-  landing works!
-</p>
+<div class="fillViewHeight ">
+  <div class="homeFlex">
+    <mat-card class="homeCardStyle oceanBoatBlue" *ngFor="let f of featuredTiles" color="primary">
+      <mat-card-header>
+        <mat-card-title>{{f.title}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="{{f.img}}" alt="photo ">
+      <mat-card-content>
+        <p>
+          {{f.content}}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

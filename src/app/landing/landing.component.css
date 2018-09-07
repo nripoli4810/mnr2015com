@@ -1,0 +1,20 @@
+.fillViewHeight {
+  height: 100%;
+}
+
+.homeFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.homeCardStyle {
+    max-width: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black
+}
