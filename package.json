@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "node deploy",
-    "bd": "ng build --prod && deploy"
+    "bd": "ng build --prod && node deploy"
   },
   "private": true,
   "dependencies": {
