@@ -1,7 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
-
 body {
     margin: 0;
     padding: 0;
@@ -53,15 +50,22 @@ body {
     background-color: #edd3ea;
 }
 
-.center{
+.center {
     text-align: center
 }
-.indent{
+
+.indent {
     margin-left: 40px;
 }
-.underline{
+
+.underline {
     text-decoration: underline
 }
-.rightalign{
+
+.rightalign {
     text-align: right
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }
