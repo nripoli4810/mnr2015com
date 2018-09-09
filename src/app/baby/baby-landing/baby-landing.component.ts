@@ -8,6 +8,7 @@ import {  } from '@angular/router';
 })
 export class BabyLandingComponent implements OnInit {
 
+  // public navLinks[];
   constructor() { }
 
   ngOnInit() {

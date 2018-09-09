@@ -1,12 +1,11 @@
-<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="10px" class="babyNav">
-  <div fxFlex="33%">
-    <button mat-button class="cursor-pointer" routerLink='welcome'>Welcome</button>
-  </div>
-  <div fxFlex="33%">
-    <button mat-button class="cursor-pointer" routerLink='shower'>Baby Shower</button>
-  </div>
-  <div fxFlex="33%">
-    <button mat-button class="cursor-pointer" routerLink='registry'>Registry</button>
-  </div>
-</div>
-<mat-divider></mat-divider>
+<nav mat-tab-nav-bar dynamicHeight mat-stretch-tabs color="accent">
+  <a mat-tab-link routerLink="welcome" routerLinkActive="active-link">
+        Welcome
+        </a>
+  <a mat-tab-link routerLink="shower" routerLinkActive="active-link">
+        Shower
+        </a>
+  <a mat-tab-link routerLink="registry" routerLinkActive="active-link">
+        Registry
+    </a>
+</nav>
