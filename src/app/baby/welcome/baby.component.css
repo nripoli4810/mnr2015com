@@ -16,4 +16,13 @@
 .babyCards {
     background-color: #15b8db;
     color: white;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
+.pageWrapper {
+    background-color: red;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
 }
