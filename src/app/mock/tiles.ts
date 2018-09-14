@@ -17,7 +17,7 @@ export const MockTiles: Tile[] = [
         title: 'The Baby',
         subtitle: 'Subtitle',
         avatar: 'plus_one',
-        content: 'This is some short content.',
+        content: 'Shower Info, Registry, and more',
         href: '/baby',
         img: '../../assets/whiteShoes.jpg',
         featured: true,

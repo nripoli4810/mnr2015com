@@ -16,6 +16,7 @@ import { LandingComponent } from './landing/landing.component';
 import { RedirectedComponent } from './redirected/redirected.component';
 import { SharedComponentsModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     SharedComponentsModule,
     AppRoutingModule,
     GalleriesModule,
-    BabyModule
+    BabyModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

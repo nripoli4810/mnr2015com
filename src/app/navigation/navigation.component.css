@@ -3,10 +3,10 @@
     height: 100%;
 }
 
-.mat-sidenav-content {
-    display: block;
-    height: 100vh;
+.mat-sidenav-container {
+    height: 100%;
 }
+
 
 .mat-list-item {
     width: 100%;
@@ -22,9 +22,14 @@
     padding-left: -5px;
 }
 
-#logo {
+.logo {
     height: 64px;
     width: 64px;
+    padding-top: 8px;
+}
+.logo-small {
+    height: 32px;
+    width: 32px;
     padding-top: 8px;
 }
 
