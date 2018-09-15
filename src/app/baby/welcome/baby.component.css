@@ -27,6 +27,11 @@
     height: 100%;
 }
 
-.block {
+.faqBlock {
     display: block !important;
+    padding-bottom: 15px;
+}
+
+.mat-list-item {
+    height: auto;
 }
