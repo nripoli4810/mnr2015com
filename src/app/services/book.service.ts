@@ -13,9 +13,6 @@ export class BookService {
   constructor(private http: HttpClient) { }
 
   AddBook(book: BabyBook) {
-    this.http.request(this.bookServiceUrl, new Request({
-      method:
-    });
 
   }
 
