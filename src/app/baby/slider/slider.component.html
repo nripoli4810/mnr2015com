@@ -1,21 +1,32 @@
-<carousel-component #babyCarousel [mode]="'horizontal'" [autoPlay]="true"
-  [timeToSlide]="1000" [delayAutoPlay]="5000" (onReachEnd)="restart()">
-  <!-- <div class="item-carousel" *ngFor="let slide of Slides">
-      <div [ngStyle]="{'background-image': 'url('+slide+')'}"></div>
-  </div> -->
+<carousel-component #babyCarousel [mode]="'horizontal'" [timeToSlide]="1000" [autoPlay]="true" [delayAutoPlay]="5000" (onReachEnd)="restart()">
   <div class="item-carousel">
-    <div style="background-image: url('../../../assets/babySlides/1.jpg')"></div>
+    <div class="description">
+      <p>We have a gummy bear!</p>
+    </div>
+    <div style="background-image: url('../../../assets/babySlides/1.jpg'); position: absolute;"></div>
   </div>
   <div class="item-carousel">
-    <div style="background-image: url('../../../assets/babySlides/2.jpg')"></div>
+    <div class="description">
+      <p>We have a gummy bear!</p>
+    </div>
+    <div style="background-image: url('../../../assets/babySlides/2.jpg'); position: absolute;"></div>
   </div>
   <div class="item-carousel">
-    <div style="background-image: url('../../../assets/babySlides/3.jpg')"></div>
+    <div class="description">
+      <p>We have a gummy bear!</p>
+    </div>
+    <div style="background-image: url('../../../assets/babySlides/3.jpg'); position: absolute;"></div>
   </div>
   <div class="item-carousel">
-    <div style="background-image: url('../../../assets/babySlides/4.jpg')"></div>
+    <div class="description">
+      <p>We have a gummy bear!</p>
+    </div>
+    <div style="background-image: url('../../../assets/babySlides/4.jpg'); position: absolute;"></div>
   </div>
   <div class="item-carousel">
-    <div style="background-image: url('../../../assets/babySlides/5.jpg')"></div>
+    <div class="description">
+      <p>We have a gummy bear!</p>
+    </div>
+    <div style="background-image: url('../../../assets/babySlides/5.jpg'); position: absolute;"></div>
   </div>
 </carousel-component>

@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { CarouselComponent } from 'angular2-carousel';
 import { NgStyle } from '@angular/common';
 import { delay } from 'q';
+import { MockSlides } from '../../mock/slides';
+import { Slide } from '../../models/slide';
 
 @Component({
   selector: 'app-baby-slider',
@@ -9,13 +11,7 @@ import { delay } from 'q';
   styleUrls: ['./slider.component.css']
 })
 export class SliderComponent implements OnInit {
-  public Slides: [
-    'https://static.ferrarinetwork.ferrari.com/images/GTW_ferrari-488-pista-piloti-ferrari-full_OY7MW9jW.jpg',
-    '../../../assets/babySlides/2.jpg',
-    '../../../assets/babySlides/3.jpg',
-    '../../../assets/babySlides/4.jpg',
-    '../../../assets/babySlides/5.jpg'
-  ];
+  public Slides: Slide[];
 
   @ViewChild('babyCarousel')
   babyCarousel: CarouselComponent;
@@ -23,6 +19,7 @@ export class SliderComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
+    this.Slides = MockSlides;
     this.babyCarousel.lockSlides = true;
   }
 

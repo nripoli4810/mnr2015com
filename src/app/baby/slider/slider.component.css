@@ -31,7 +31,7 @@
 }
 
 .item-carousel div {
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -56,4 +56,18 @@
     :host carousel-component.cube-mode.ready>>>.container {
         perspective: 15vh!important;
     }
+}
+
+.description {
+    background-color: black;
+    opacity: 0.5;
+    position: fixed;
+    z-index: 1001;
+    height: 60px !important;
+    bottom: 0px;
+    font-size: 36px;
+}
+
+.description p {
+    margin: 0 auto;
 }
