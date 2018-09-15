@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { BabyNavigationComponent } from './baby-navigation/baby-navigation.component';
 import { BabyRoutingModule } from './baby-routing/baby-routing.module';
 import { AnnouncementComponent } from './announcement/announcement.component';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,7 @@ import { AnnouncementComponent } from './announcement/announcement.component';
     RouterModule,
     BabyRoutingModule
   ],
-  declarations: [BabyComponent, ShowerComponent, RegistryComponent, BabyLandingComponent, BabyNavigationComponent, AnnouncementComponent],
+  declarations: [BabyComponent, ShowerComponent, RegistryComponent, BabyLandingComponent, BabyNavigationComponent, AnnouncementComponent, SliderComponent],
   exports: [BabyComponent]
 })
 export class BabyModule { }
