@@ -1,3 +1,21 @@
-<p>
-  slider works!
-</p>
+<carousel-component #babyCarousel [mode]="'horizontal'" [autoPlay]="true"
+  [timeToSlide]="1000" [delayAutoPlay]="5000" (onReachEnd)="restart()">
+  <!-- <div class="item-carousel" *ngFor="let slide of Slides">
+      <div [ngStyle]="{'background-image': 'url('+slide+')'}"></div>
+  </div> -->
+  <div class="item-carousel">
+    <div style="background-image: url('../../../assets/babySlides/1.jpg')"></div>
+  </div>
+  <div class="item-carousel">
+    <div style="background-image: url('../../../assets/babySlides/2.jpg')"></div>
+  </div>
+  <div class="item-carousel">
+    <div style="background-image: url('../../../assets/babySlides/3.jpg')"></div>
+  </div>
+  <div class="item-carousel">
+    <div style="background-image: url('../../../assets/babySlides/4.jpg')"></div>
+  </div>
+  <div class="item-carousel">
+    <div style="background-image: url('../../../assets/babySlides/5.jpg')"></div>
+  </div>
+</carousel-component>
