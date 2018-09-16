@@ -7,5 +7,6 @@ export class Tile {
     href: string;
     featured: boolean;
     img: string;
+    alt: string;
     hidden: boolean;
 }
