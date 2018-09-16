@@ -1,5 +1,5 @@
 :host carousel-component {
-    display: block;
+
     overflow: hidden;
     margin: 0 auto;
 }
@@ -23,7 +23,7 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-}
+border: none !important;  }
 
 .item-carousel div, .item-carousel img {
     height: 100%;
@@ -31,7 +31,7 @@
 }
 
 .item-carousel div {
-    background-size: cover;
+  background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
 }

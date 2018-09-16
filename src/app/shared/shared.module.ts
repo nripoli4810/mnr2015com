@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { CountdownComponent } from './countdown/countdown.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CallbackPipe } from './callback.pipe';
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
-  imports: [],
+  imports: [CommonModule],
   declarations: [
     CountdownComponent,
     NotFoundComponent,
