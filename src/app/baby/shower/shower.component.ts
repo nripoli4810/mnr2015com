@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Shower } from '../../models/shower';
 import { BabyService } from '../../services/baby.service';
+import { MatDialog } from '@angular/material';
+import { AddBookDialogComponent } from '../dialogs/add-book/add-book.component';
+import { Http, RequestOptions } from '@angular/http';
 
 @Component({
   selector: 'app-shower',
@@ -10,7 +13,8 @@ import { BabyService } from '../../services/baby.service';
 export class ShowerComponent implements OnInit {
   mockShowers: Shower[];
 
-  constructor(private babyService: BabyService) {
+  constructor(private babyService: BabyService,
+    public dialog: MatDialog) {
   }
 
   ngOnInit() {
@@ -18,4 +22,9 @@ export class ShowerComponent implements OnInit {
       .subscribe(showers => this.mockShowers = showers);
   }
 
+  openBookDialog() {
+      const d = this.dialog.open(AddBookDialogComponent, {
+        maxWidth: '640px',
+      });
+  }
 }

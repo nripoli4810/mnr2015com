@@ -5,16 +5,18 @@ import { BabyComponent } from '../welcome/baby.component';
 import { RegistryComponent } from '../registry/registry.component';
 import { ShowerComponent } from '../shower/shower.component';
 import { BabyLandingComponent } from '../baby-landing/baby-landing.component';
+import { BookViewComponent } from '../book-view/book-view.component';
 
 const externalUrlRedirectResolver = new InjectionToken('externalUrlRedirectResolver');
 
 const babyRoutes: Routes = [
   {
-    path: 'baby/welcome', component: BabyLandingComponent, children: [
+    path: 'baby', component: BabyLandingComponent, children: [
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: 'welcome', component: BabyComponent },
       { path: 'shower', component: ShowerComponent },
-      { path: 'registry', component: RegistryComponent }
+      { path: 'registry', component: RegistryComponent },
+      { path: 'books', component: BookViewComponent },
     ]
   },
 ];

@@ -38,10 +38,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatIconModule,
     MatButtonModule,
     SharedComponentsModule,
-    AppRoutingModule,
     GalleriesModule,
     BabyModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

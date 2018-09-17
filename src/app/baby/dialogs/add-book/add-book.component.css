@@ -1,0 +1,17 @@
+full-width {
+    width: 100% !important;
+    display: block !important;
+}
+
+.tableNormal {
+    min-width: 150px;
+    width: 450px;
+}
+
+.mat-form-field {
+    display: block;
+}
+
+.mat-button {
+    float: right;
+}
