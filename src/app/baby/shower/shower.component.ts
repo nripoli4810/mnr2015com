@@ -8,7 +8,6 @@ import { BabyService } from '../../services/baby.service';
   styleUrls: ['./shower.component.css']
 })
 export class ShowerComponent implements OnInit {
-
   mockShowers: Shower[];
 
   constructor(private babyService: BabyService) {
