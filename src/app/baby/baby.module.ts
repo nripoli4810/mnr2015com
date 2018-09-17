@@ -14,7 +14,8 @@ import { BabyNavigationComponent } from './baby-navigation/baby-navigation.compo
 import { BabyRoutingModule } from './baby-routing/baby-routing.module';
 import { AnnouncementComponent } from './announcement/announcement.component';
 import { SliderComponent } from './slider/slider.component';
-import { CarouselModule } from 'angular2-carousel'
+import { CarouselModule } from 'angular2-carousel';
+import { BookViewComponent } from './book-view/book-view.component'
 
 @NgModule({
   imports: [
@@ -33,7 +34,8 @@ import { CarouselModule } from 'angular2-carousel'
     BabyLandingComponent,
     BabyNavigationComponent,
     AnnouncementComponent,
-    SliderComponent],
+    SliderComponent,
+    BookViewComponent],
   exports: [BabyComponent]
 })
 export class BabyModule { }
