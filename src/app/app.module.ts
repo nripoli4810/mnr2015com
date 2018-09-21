@@ -17,6 +17,7 @@ import { RedirectedComponent } from './redirected/redirected.component';
 import { SharedComponentsModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MailinglistComponent } from './dialogs/mailinglist/mailinglist.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     NavigationComponent,
     LandingComponent,
     RedirectedComponent,
+    MailinglistComponent,
   ],
   imports: [
     BrowserModule,
