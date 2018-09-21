@@ -18,6 +18,7 @@ import { SharedComponentsModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MailinglistComponent } from './dialogs/mailinglist/mailinglist.component';
+import { RsvpComponent } from './dialogs/rsvp/rsvp.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { MailinglistComponent } from './dialogs/mailinglist/mailinglist.componen
     LandingComponent,
     RedirectedComponent,
     MailinglistComponent,
+    RsvpComponent,
   ],
   imports: [
     BrowserModule,
