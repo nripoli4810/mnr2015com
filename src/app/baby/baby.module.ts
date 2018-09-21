@@ -1,24 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BabyComponent } from './welcome/baby.component';
+import { BrowserModule } from '@angular/platform-browser';
 import { MatGridListModule, MatListModule, MatButtonModule, MatExpansionModule,
   MatTabsModule, MatDialogModule, MatInputModule, MatIconModule } from '@angular/material';
-import { SharedComponentsModule } from '../shared/shared.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
+import { SharedComponentsModule } from '../shared/shared.module';
+import { BabyComponent } from './welcome/baby.component';
 import { ShowerComponent } from './shower/shower.component';
 import { RegistryComponent } from './registry/registry.component';
 import { BabyLandingComponent } from './baby-landing/baby-landing.component';
-import { RouterModule } from '@angular/router';
 import { BabyNavigationComponent } from './baby-navigation/baby-navigation.component';
 import { BabyRoutingModule } from './baby-routing/baby-routing.module';
 import { AnnouncementComponent } from './announcement/announcement.component';
 import { SliderComponent } from './slider/slider.component';
 import { CarouselModule } from 'angular2-carousel';
 import { BookViewComponent } from './book-view/book-view.component';
-import { AddBookDialogComponent } from './dialogs/add-book/add-book.component'
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
+import { AddBookDialogComponent } from './dialogs/add-book/add-book.component';
+import { MailinglistComponent } from './dialogs/mailinglist/mailinglist.component';
+import { RsvpComponent } from './dialogs/rsvp/rsvp.component';
+
 
 @NgModule({
   imports: [
@@ -31,7 +34,7 @@ import { HttpModule } from '@angular/http';
     SharedComponentsModule,
     RouterModule,
     BabyRoutingModule,
-    CarouselModule
+    CarouselModule,
   ],
   declarations: [
     AddBookDialogComponent,
@@ -43,10 +46,14 @@ import { HttpModule } from '@angular/http';
     AnnouncementComponent,
     SliderComponent,
     BookViewComponent,
+    MailinglistComponent,
+    RsvpComponent,
   ],
   exports: [BabyComponent],
   entryComponents: [
-    AddBookDialogComponent
+    AddBookDialogComponent,
+    MailinglistComponent,
+    RsvpComponent
   ]
 })
 export class BabyModule { }

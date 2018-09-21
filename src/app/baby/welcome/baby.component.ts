@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MailinglistComponent } from '../dialogs/mailinglist/mailinglist.component';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-baby',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BabyComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
   }
 
+  openMailingListDialog() {
+    const d = this.dialog.open(MailinglistComponent, { minWidth: '320px', maxWidth: '640px' });
+  }
 }

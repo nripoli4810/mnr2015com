@@ -1,18 +1,18 @@
 <div>
-  <h1 style="float:left">Add a Book</h1>
-  <button mat-dialog-close mat-button><mat-icon style="float: right">close</mat-icon></button>
+    <button mat-dialog-close mat-button style="min-width: auto !important;"><mat-icon >close</mat-icon></button>
 </div>
+<h2>Add a Book</h2>
 <form action="https://docs.google.com/forms/d/e/1FAIpQLSehk1Y989sqALOoZq8x9Or9xJ-shFTDImrH7bXSF6xLIIhSGg/formResponse?embedded=true"
   target="_self" method="POST" id="mG61Hd" class="full-width">
-  <table ngClass.gt-sm="tableNormal">
+  <table class="tableNormal">
     <tr>
       <mat-form-field class="full-width">
-        <input autofocus name="entry.1611915339" matInput placeholder="Title">
+        <input autofocus name="entry.1611915339" matInput placeholder="Title" required>
       </mat-form-field>
     </tr>
     <tr>
       <mat-form-field class="full-width">
-        <input name="entry.1119194235" matInput placeholder="Author">
+        <input name="entry.1119194235" matInput placeholder="Author" required>
       </mat-form-field>
     </tr>
     <tr>
@@ -20,6 +20,6 @@
         <textarea name="entry.800614169" matInput placeholder="Notes"></textarea>
       </mat-form-field>
     </tr>
-    <button mat-button class="batteryChargedBlue">Submit</button>
   </table>
+  <button mat-button class="batteryChargedBlue">Submit</button>
 </form>
