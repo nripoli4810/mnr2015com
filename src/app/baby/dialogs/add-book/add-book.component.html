@@ -1,9 +1,13 @@
+<script type="text/javascript">
+  var submitted=false;
+</script>
+
 <div>
     <button mat-dialog-close mat-button style="min-width: auto !important;"><mat-icon >close</mat-icon></button>
 </div>
 <h2>Add a Book</h2>
 <form action="https://docs.google.com/forms/d/e/1FAIpQLSehk1Y989sqALOoZq8x9Or9xJ-shFTDImrH7bXSF6xLIIhSGg/formResponse?embedded=true"
-  target="_self" method="POST" id="mG61Hd" class="full-width">
+  target="hidden_iframe" method="POST" id="mG61Hd" class="full-width" onsubmit="submitted=true">
   <table class="tableNormal">
     <tr>
       <mat-form-field class="full-width">
@@ -23,3 +27,8 @@
   </table>
   <button mat-button class="batteryChargedBlue">Submit</button>
 </form>
+
+
+
+
+<iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted){window.location='#/baby/shower';}" style="display: none;"></iframe>
