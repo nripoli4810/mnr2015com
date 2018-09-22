@@ -24,6 +24,6 @@ export class ShowerComponent implements OnInit {
   }
 
   openBookDialog() {
-      const d = this.dialog.open(AddBookDialogComponent, { minWidth: '280px', maxWidth: '640px' });
+      const d = this.dialog.open(AddBookDialogComponent, { minWidth: '280px', maxWidth: '640px',  autoFocus: false });
   }
 }
