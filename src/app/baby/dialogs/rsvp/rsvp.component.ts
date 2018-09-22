@@ -5,7 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './rsvp.component.html',
   styleUrls: ['./rsvp.component.css']
 })
-export class RsvpComponent implements OnInit {
+export class RsvpDialogComponent implements OnInit {
+  selectedLocation: string;
+  selectedAnswer: string;
 
   constructor() { }
 

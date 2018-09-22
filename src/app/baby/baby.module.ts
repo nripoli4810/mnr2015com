@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatGridListModule, MatListModule, MatButtonModule, MatExpansionModule,
-  MatTabsModule, MatDialogModule, MatInputModule, MatIconModule } from '@angular/material';
+  MatTabsModule, MatDialogModule, MatInputModule, MatIconModule, MatSelectModule, MatRadioModule, MatFormFieldModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
@@ -19,8 +19,9 @@ import { SliderComponent } from './slider/slider.component';
 import { CarouselModule } from 'angular2-carousel';
 import { BookViewComponent } from './book-view/book-view.component';
 import { AddBookDialogComponent } from './dialogs/add-book/add-book.component';
-import { MailinglistComponent } from './dialogs/mailinglist/mailinglist.component';
-import { RsvpComponent } from './dialogs/rsvp/rsvp.component';
+import { MailingListDialogComponent } from './dialogs/mailinglist/mailinglist.component';
+import { RsvpDialogComponent } from './dialogs/rsvp/rsvp.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { RsvpComponent } from './dialogs/rsvp/rsvp.component';
     BrowserModule,
     HttpModule,
     MatGridListModule, MatListModule, MatButtonModule, MatExpansionModule, MatTabsModule, MatDialogModule, MatInputModule,
+    MatSelectModule, MatRadioModule,
     MatIconModule,
     FlexLayoutModule,
     SharedComponentsModule,
@@ -46,14 +48,14 @@ import { RsvpComponent } from './dialogs/rsvp/rsvp.component';
     AnnouncementComponent,
     SliderComponent,
     BookViewComponent,
-    MailinglistComponent,
-    RsvpComponent,
+    MailingListDialogComponent,
+    RsvpDialogComponent,
   ],
   exports: [BabyComponent],
   entryComponents: [
     AddBookDialogComponent,
-    MailinglistComponent,
-    RsvpComponent
+    MailingListDialogComponent,
+    RsvpDialogComponent
   ]
 })
 export class BabyModule { }

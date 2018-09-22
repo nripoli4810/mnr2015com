@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MailinglistComponent } from '../dialogs/mailinglist/mailinglist.component';
+import { MailingListDialogComponent } from '../dialogs/mailinglist/mailinglist.component';
 import { MatDialog } from '@angular/material';
 
 @Component({
@@ -15,6 +15,6 @@ export class BabyComponent implements OnInit {
   }
 
   openMailingListDialog() {
-    const d = this.dialog.open(MailinglistComponent, { minWidth: '280px', maxWidth: '640px',  autoFocus: false });
+    const d = this.dialog.open(MailingListDialogComponent, { minWidth: '280px', maxWidth: '640px',  autoFocus: false });
   }
 }

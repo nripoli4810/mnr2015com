@@ -3,7 +3,7 @@ import { Shower } from '../../models/shower';
 import { BabyService } from '../../services/baby.service';
 import { MatDialog } from '@angular/material';
 import { AddBookDialogComponent } from '../dialogs/add-book/add-book.component';
-import { Http, RequestOptions } from '@angular/http';
+import { RsvpDialogComponent } from '../dialogs/rsvp/rsvp.component';
 
 @Component({
   selector: 'app-shower',
@@ -12,7 +12,6 @@ import { Http, RequestOptions } from '@angular/http';
 })
 export class ShowerComponent implements OnInit {
   mockShowers: Shower[];
-  submitted: any;
 
   constructor(private babyService: BabyService,
     public dialog: MatDialog) {
@@ -24,6 +23,10 @@ export class ShowerComponent implements OnInit {
   }
 
   openBookDialog() {
-      const d = this.dialog.open(AddBookDialogComponent, { minWidth: '280px', maxWidth: '640px',  autoFocus: false });
+    const d = this.dialog.open(AddBookDialogComponent, { minWidth: '280px', maxWidth: '640px',  autoFocus: false });
+  }
+
+  showRSVPDialog() {
+    const d = this.dialog.open(RsvpDialogComponent, { minWidth: '280px', maxWidth: '800px' });
   }
 }

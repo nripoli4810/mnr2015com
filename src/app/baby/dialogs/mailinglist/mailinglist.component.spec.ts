@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MailinglistComponent } from './mailinglist.component';
+import { MailingListDialogComponent } from './mailinglist.component';
 
 describe('MailinglistComponent', () => {
-  let component: MailinglistComponent;
-  let fixture: ComponentFixture<MailinglistComponent>;
+  let component: MailingListDialogComponent;
+  let fixture: ComponentFixture<MailingListDialogComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MailinglistComponent ]
+      declarations: [ MailingListDialogComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MailinglistComponent);
+    fixture = TestBed.createComponent(MailingListDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
