@@ -1,34 +1,31 @@
-<script type="text/javascript">
-  var submitted=false;
-</script>
-
-<iframe id="hidden_iframe" name="hidden_iframe"
-  onload="if(submitted){window.location='#/baby/shower';}"
-  style="display: none;"></iframe>
-
 <div>
     <button mat-dialog-close mat-button style="min-width: auto !important;"><mat-icon >close</mat-icon></button>
 </div>
-<h2>Add a Book</h2>
+<h2 mat-dialog-title>Add a Book</h2>
+<mat-dialog-content>
+  <iframe id="hidden_iframe" name="hidden_iframe"
+    onload="if(submitted){window.location='#/baby/shower';}"
+    style="display: none;"></iframe>
 
-<form action="https://docs.google.com/forms/d/e/1FAIpQLSehk1Y989sqALOoZq8x9Or9xJ-shFTDImrH7bXSF6xLIIhSGg/formResponse?embedded=true"
-  target="hidden_iframe" method="POST" id="mG61Hd" class="full-width" onsubmit="submitted=true">
-  <table class="tableNormal">
-    <tr>
-      <mat-form-field class="full-width" focus>
-        <input autofocus focus name="entry.1611915339" matInput placeholder="Title" required>
-      </mat-form-field>
-    </tr>
-    <tr>
-      <mat-form-field class="full-width">
-        <input name="entry.1119194235" matInput placeholder="Author" required>
-      </mat-form-field>
-    </tr>
-    <tr>
-      <mat-form-field class="full-width">
-        <textarea name="entry.800614169" matInput placeholder="Notes"></textarea>
-      </mat-form-field>
-    </tr>
-  </table>
-  <button mat-button class="batteryChargedBlue">Submit</button>
-</form>
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSehk1Y989sqALOoZq8x9Or9xJ-shFTDImrH7bXSF6xLIIhSGg/formResponse?embedded=true"
+    target="hidden_iframe" method="POST" id="mG61Hd" class="full-width" onsubmit="submitted=true">
+    <table class="tableNormal">
+      <tr>
+        <mat-form-field class="full-width" focus>
+          <input autofocus focus name="entry.1611915339" matInput placeholder="Title" required>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field class="full-width">
+          <input name="entry.1119194235" matInput placeholder="Author" required>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field class="full-width">
+          <textarea name="entry.800614169" matInput placeholder="Notes"></textarea>
+        </mat-form-field>
+      </tr>
+    </table>
+    <button mat-button class="batteryChargedBlue">Submit</button>
+  </form>
+</mat-dialog-content>

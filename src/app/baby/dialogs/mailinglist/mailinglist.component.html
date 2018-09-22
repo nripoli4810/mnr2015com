@@ -1,47 +1,47 @@
-<script type="text/javascript">
-  var submitted=false;
-</script>
-
-<iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted){window.location='#/baby/welcome';}" style="display: none;"></iframe>
-
 <div>
   <button mat-dialog-close mat-button style="min-width: auto !important;"><mat-icon >close</mat-icon></button>
 </div>
-<h2>Get the announcement!</h2>
-<form action="https://docs.google.com/forms/d/e/1FAIpQLSfPcvAJUr_z8AezyUARwuldW0MljDM9EQxSfsYb-gPuqjnjQA/formResponse?embedded=true"
-  target="hidden_iframe" method="POST" id="mG61Hd" class="full-width" onsubmit="submitted=true">
-  <table class="tableNormal">
-    <tr>
-      <mat-form-field class="full-width">
-        <input autofocus name="entry.403366574" matInput placeholder="Full Name" required>
-        </mat-form-field>
-    </tr>
-    <tr>
-      <mat-form-field class="full-width">
-        <input autofocus name="entry.972465659" matInput placeholder="Street Address" required>
-      </mat-form-field>
-    </tr>
-    <tr>
-      <mat-form-field class="full-width">
-        <input autofocus name="entry.1936712471" matInput placeholder="Street Address 2">
-        </mat-form-field>
-    </tr>
-    <tr>
-      <mat-form-field class="full-width">
-        <input autofocus name="entry.1137567920" matInput placeholder="City" required>
-        </mat-form-field>
-    </tr>
-    <tr>
-      <mat-form-field class="full-width">
-        <input autofocus name="entry.1685668907" matInput placeholder="State" required>
-      </mat-form-field>
-    </tr>
-    <tr>
-      <mat-form-field class="full-width">
-        <input autofocus name="entry.1012518954" matInput placeholder="Zip" required>
-      </mat-form-field>
-    </tr>
-  </table>
-  <button type="submit" mat-button class="batteryChargedBlue">Submit</button>
-</form>
+<h2 mat-dialog-title>Get the announcement!</h2>
+<mat-dialog-content>
+  <script type="text/javascript">
+    var submitted=false;
+  </script>
+  <iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted){window.location='#/baby/welcome';}" style="display: none;"></iframe>
 
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSfPcvAJUr_z8AezyUARwuldW0MljDM9EQxSfsYb-gPuqjnjQA/formResponse?embedded=true"
+    target="hidden_iframe" method="POST" id="mG61Hd" class="full-width" onsubmit="submitted=true">
+    <table class="tableNormal">
+      <tr>
+        <mat-form-field class="full-width">
+          <input autofocus name="entry.403366574" matInput placeholder="Full Name" required>
+          </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field class="full-width">
+          <input autofocus name="entry.972465659" matInput placeholder="Street Address" required>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field class="full-width">
+          <input autofocus name="entry.1936712471" matInput placeholder="Street Address 2">
+          </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field class="full-width">
+          <input autofocus name="entry.1137567920" matInput placeholder="City" required>
+          </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field class="full-width">
+          <input autofocus name="entry.1685668907" matInput placeholder="State" required>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field class="full-width">
+          <input autofocus name="entry.1012518954" matInput placeholder="Zip" required>
+        </mat-form-field>
+      </tr>
+    </table>
+    <button type="submit" mat-button class="batteryChargedBlue">Submit</button>
+  </form>
+</mat-dialog-content>
