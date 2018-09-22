@@ -2,6 +2,10 @@
   var submitted=false;
 </script>
 
+<iframe id="hidden_iframe" name="hidden_iframe"
+  onload="if(submitted){window.location='#/baby/shower';}"
+  style="display: none;"></iframe>
+
 <div>
     <button mat-dialog-close mat-button style="min-width: auto !important;"><mat-icon >close</mat-icon></button>
 </div>
@@ -27,8 +31,3 @@
   </table>
   <button mat-button class="batteryChargedBlue">Submit</button>
 </form>
-
-
-
-
-<iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted){window.location='#/baby/shower';}" style="display: none;"></iframe>

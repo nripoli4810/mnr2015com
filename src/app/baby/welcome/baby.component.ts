@@ -15,6 +15,6 @@ export class BabyComponent implements OnInit {
   }
 
   openMailingListDialog() {
-    const d = this.dialog.open(MailinglistComponent, { minWidth: '320px', maxWidth: '640px' });
+    const d = this.dialog.open(MailinglistComponent, { minWidth: '280px', maxWidth: '640px' });
   }
 }

@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mailinglist.component.css']
 })
 export class MailinglistComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {

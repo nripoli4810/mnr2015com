@@ -1,9 +1,15 @@
+<script type="text/javascript">
+  var submitted=false;
+</script>
+
+<iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted){window.location='#/baby/welcome';}" style="display: none;"></iframe>
+
 <div>
   <button mat-dialog-close mat-button style="min-width: auto !important;"><mat-icon >close</mat-icon></button>
 </div>
 <h2>Get the announcement!</h2>
 <form action="https://docs.google.com/forms/d/e/1FAIpQLSfPcvAJUr_z8AezyUARwuldW0MljDM9EQxSfsYb-gPuqjnjQA/formResponse?embedded=true"
-  target="_self" method="POST" id="mG61Hd" class="full-width">
+  target="hidden_iframe" method="POST" id="mG61Hd" class="full-width" onsubmit="submitted=true">
   <table class="tableNormal">
     <tr>
       <mat-form-field class="full-width">
@@ -36,5 +42,6 @@
       </mat-form-field>
     </tr>
   </table>
-  <button mat-button class="batteryChargedBlue">Submit</button>
+  <button type="submit" mat-button class="batteryChargedBlue">Submit</button>
 </form>
+

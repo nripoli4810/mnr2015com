@@ -8,9 +8,7 @@ import { NgStyle } from '@angular/common';
   styleUrls: ['./add-book.component.css']
 })
 export class AddBookDialogComponent implements OnInit {
-  constructor(private domSanitizer: DomSanitizer) { }
+  constructor(private domSanitizer: DomSanitizer) {}
 
-  ngOnInit() { }
+  ngOnInit() {}
 }
-
-// TODO : On smaller devices, the close button creates its own column.

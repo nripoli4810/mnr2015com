@@ -12,6 +12,7 @@ import { Http, RequestOptions } from '@angular/http';
 })
 export class ShowerComponent implements OnInit {
   mockShowers: Shower[];
+  submitted: any;
 
   constructor(private babyService: BabyService,
     public dialog: MatDialog) {
@@ -23,6 +24,6 @@ export class ShowerComponent implements OnInit {
   }
 
   openBookDialog() {
-      const d = this.dialog.open(AddBookDialogComponent, { minWidth: '320px', maxWidth: '640px' });
+      const d = this.dialog.open(AddBookDialogComponent, { minWidth: '280px', maxWidth: '640px' });
   }
 }
