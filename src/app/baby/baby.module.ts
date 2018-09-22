@@ -21,8 +21,6 @@ import { BookViewComponent } from './book-view/book-view.component';
 import { AddBookDialogComponent } from './dialogs/add-book/add-book.component';
 import { MailingListDialogComponent } from './dialogs/mailinglist/mailinglist.component';
 import { RsvpDialogComponent } from './dialogs/rsvp/rsvp.component';
-import { FormsModule } from '@angular/forms';
-
 
 @NgModule({
   imports: [
