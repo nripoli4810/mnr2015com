@@ -4,11 +4,11 @@
 <h2 mat-dialog-title>Add a Book</h2>
 <mat-dialog-content>
   <iframe id="hidden_iframe" name="hidden_iframe"
-    onload="if(submitted){window.location='#/baby/shower';}"
+    onload="if(bookSubmitted){bookSubmitted=false;window.location='#/baby/shower';}"
     style="display: none;"></iframe>
 
   <form action="https://docs.google.com/forms/d/e/1FAIpQLSehk1Y989sqALOoZq8x9Or9xJ-shFTDImrH7bXSF6xLIIhSGg/formResponse?embedded=true"
-    target="hidden_iframe" method="POST" id="mG61Hd" class="full-width" onsubmit="submitted=true">
+    target="hidden_iframe" method="POST" id="mG61Hd" class="full-width" onsubmit="bookSubmitted=true">
     <table class="tableNormal">
       <tr>
         <mat-form-field class="full-width" focus>

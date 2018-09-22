@@ -1,15 +1,12 @@
 <div>
   <button mat-dialog-close mat-button style="min-width: auto !important;"><mat-icon >close</mat-icon></button>
 </div>
-<h2 mat-dialog-title>Get the announcement!</h2>
+<h2 mat-dialog-title>Get the Announcement!</h2>
 <mat-dialog-content>
-  <script type="text/javascript">
-    var submitted=false;
-  </script>
-  <iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted){window.location='#/baby/welcome';}" style="display: none;"></iframe>
+  <iframe id="hidden_iframe" name="hidden_iframe" onload="if(addrSubmitted){addrSubmitted=false;window.location='#/baby/welcome';}" style="display: none;"></iframe>
 
   <form action="https://docs.google.com/forms/d/e/1FAIpQLSfPcvAJUr_z8AezyUARwuldW0MljDM9EQxSfsYb-gPuqjnjQA/formResponse?embedded=true"
-    target="hidden_iframe" method="POST" id="mG61Hd" class="full-width" onsubmit="submitted=true">
+    target="hidden_iframe" method="POST" id="mG61Hd" class="full-width" onsubmit="addrSubmitted=true">
     <table class="tableNormal">
       <tr>
         <mat-form-field class="full-width">

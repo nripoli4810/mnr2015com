@@ -2,48 +2,54 @@
     <button mat-dialog-close mat-button style="min-width: auto !important;"><mat-icon >close</mat-icon></button>
 </div>
 
-<h2>Ripoli Baby Shower RSVP</h2>
-<p>Please let us know if you will be able to attend the shower you were invited to!</p>
+<h2 mat-dialog-title class="handlee">Baby Shower RSVP</h2>
+<mat-dialog-content class="nunito">
+  <iframe id="hidden_iframe" name="hidden_iframe" onload="if(rsvpSubmitted){rsvpSubmitted=false;window.location='#/baby/shower';}" style="display: none;"></iframe>
+  <p>Please let us know if you will be able to attend the shower you were invited to!</p>
 
-<form action="https://docs.google.com/forms/d/e/1FAIpQLSf5y7VMOFUFsjb0Ag46XIhjhbhGqyw6W6gzV05dod67W2cy5Q/formResponse?embedded=true"
-  target="_self" method="POST" id="mG61Hd" class="full-width">
-  <table class="tableNormal">
-    <tr>
-      <mat-form-field focus class="full-width">
-        <mat-select placeholder="Choose location" [(value)]="selectedLocation" required>
-          <mat-option value="Canandaigua NY">
-            Canandaigua, NY
-          </mat-option>
-          <mat-option value="Titusville PA">
-            Titusville, PA
-          </mat-option>
-          <mat-option value="Cleveland OH">
-            Cleveland, OH
-          </mat-option>
-        </mat-select>
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSf5y7VMOFUFsjb0Ag46XIhjhbhGqyw6W6gzV05dod67W2cy5Q/formResponse?embedded=true"
+    target="hidden_iframe" method="POST" id="mG61Hd" class="full-width"
+    onsubmit="rsvpSubmitted=true">
+    <table class="tableNormal">
+      <tr>
+        <mat-form-field class="full-width">
+          <mat-select focus placeholder="Choose location" [(value)]="selectedLocation" required>
+            <mat-option value="Canandaigua NY">
+              Canandaigua, NY
+            </mat-option>
+            <mat-option value="Titusville PA">
+              Titusville, PA
+            </mat-option>
+            <mat-option value="Cleveland OH">
+              Cleveland, OH
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field class="full-width">
+          <input name="entry.1498135098" autocomplete="off" matInput placeholder="Name" required>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field>
+          <mat-select focus placeholder="Attending?" [(value)]="selectedAnswer" required>
+            <mat-option value="I'll be there!">
+              I'll be there!
+            </mat-option>
+            <mat-option value="Sorry, I can't make it :(">
+            Sorry, I can't make it :(
+            </mat-option>
+          </mat-select>
       </mat-form-field>
-    </tr>
-    <tr>
-      <mat-form-field class="full-width">
-        <input name="entry.1498135098" autocomplete="off" matInput placeholder="Name" required>
-      </mat-form-field>
-    </tr>
-    <tr>
-      <label for="AttendingResult" style="display: block; margin-bottom: 10px;">Will you be attending?</label>
-      <mat-radio-group name="AttendingResult" [(selected)]="selectedAnswer" style="display: inline-flex; flex-direction: column;" required>
-        <mat-radio-button style="margin-bottom: 10px;" value="I'll be there!">I'll be there!</mat-radio-button>
-        <mat-radio-button style="margin-bottom: 10px;" value="Sorry, I can't make it :(">Sorry, I can't make it :(</mat-radio-button>
-      </mat-radio-group>
-    </tr>
-  </table>
+      </tr>
+    </table>
 
-  <!--location -->
-  <input  name="entry.877086558" [(value)]="selectedLocation">
-  <!-- Attending type="hidden" -->
-  <input name="entry.2146962201" [(value)]="selectedAnswer">
+    <!--location -->
+    <input type="hidden" name="entry.877086558" [(value)]="selectedLocation">
+    <!-- Attending type="hidden" -->
+    <input type="hidden" name="entry.2146962201" [(value)]="selectedAnswer">
 
-  <div>
-    <p>location is: {{selectedLocation}}</p>
-  </div>
-  <button type="submit" mat-button class="batteryChargedBlue">Submit</button>
-</form>
+    <button type="submit" mat-button class="batteryChargedBlue">Submit</button>
+  </form>
+</mat-dialog-content>

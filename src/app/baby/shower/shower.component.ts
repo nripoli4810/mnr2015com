@@ -27,6 +27,6 @@ export class ShowerComponent implements OnInit {
   }
 
   showRSVPDialog() {
-    const d = this.dialog.open(RsvpDialogComponent, { minWidth: '280px', maxWidth: '800px' });
+    const d = this.dialog.open(RsvpDialogComponent, { minWidth: '280px', maxWidth: '800px',  autoFocus: false });
   }
 }

@@ -1,9 +1,12 @@
 <div class="pageWrapper handlee">
-  <div class="babyCards">
-    <h1 class="center black">Shower Locations</h1>
-    <mat-expansion-panel *ngFor="let s of mockShowers" class="handlee">
+  <div class="babyCards black">
+    <div class="center">
+      <h3 class="center">Locations and Information</h3>
+      <button mat-raised-button class="twentyFivePxMargin" (click)="showRSVPDialog()">RSVP here!</button>
+    </div>
+    <mat-expansion-panel *ngFor="let s of mockShowers" class="handlee tenPxMargin">
       <mat-expansion-panel-header>
-        <mat-panel-title>
+        <mat-panel-title class="handlee">
           {{s.title}}
         </mat-panel-title>
         <mat-panel-description>
@@ -12,11 +15,9 @@
       </mat-expansion-panel-header>
       <div fxLayout="row" fxLayout.lt-md="column">
         <div style="min-width: 250px">
-          {{s.host.firstName}} {{s.host.lastName}}<br /> {{s.host.contact}} <br /> {{s.host.address.street1}} <br /> {{s.host.address.city}},
-            {{s.host.address.state}} {{s.host.address.zip}}
-
+          Host: {{s.host.firstName}} {{s.host.lastName}}
           </div>
-        <div style="margin-top: 10px;;">
+        <div ngStyle.lt-sm="margin-top: 10px;">
           {{s.content}}
         </div>
       </div>
