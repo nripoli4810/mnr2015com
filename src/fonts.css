@@ -1,0 +1,37 @@
+.underline {
+    text-decoration: underline
+}
+
+.rightalign {
+    text-align: right
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+.handlee-sm {
+    font-family: 'Handlee', cursive !important;
+    font-size: .8em;
+}
+.handlee {
+    font-family: 'Handlee', cursive !important;
+    font-size: 1.2em;
+}
+.handlee-med {
+    font-family: 'Handlee', cursive !important;
+    font-size: 1.5em !important;
+}
+
+.handlee-large {
+    font-family: 'Handlee', cursive !important;
+    font-size: 2em;
+}
+
+.nunito {
+    font-family: 'Nunito', sans-serif;
+}

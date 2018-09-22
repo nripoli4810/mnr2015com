@@ -1,9 +1,9 @@
-<div class="countdown">
+<div class="countdown nunito">
   <div *ngFor="let time of display; let i = index" class="measurements {{time}}">
-    <p class="measurements-number">
+    <p class="measurements-number black" style="margin-bottom: 0px;">
       {{ (showZero && displayNumbers[i] < 10) ? '0' + displayNumbers[i].trim() : displayNumbers[i]}} </p> <span *ngIf="display[i+1]"
         class="divider"> {{divider}} </span>
-        <p class="measurements-text">
+        <p class="measurements-text black" style="margin-top: 5px;">
           {{time}}
         </p>
   </div>

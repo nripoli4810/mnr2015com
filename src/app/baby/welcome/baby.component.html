@@ -1,39 +1,44 @@
-  <div class="pageWrapper">
-    <div class="mat-elevation-z10 babyCards">
-      <h1 class="center">Welcome!</h1>
-      <h3 class="center">Thanks for visiting our Baby website!</h3>
-      <p class="center">We’ve created this site as a way to share our excitement as we prepare to welcome our new famliy member! We
-        also wanted to give everyone a place to find fun facts and info about our baby showers and our registry. Take a look
-        around, and please feel free to reach out to us if you have any questions!
-        <p class="center">Love,<br/> N&M
-        </p>
-    </div>
-    <div class="center babyCards">
-      <app-baby-announcement></app-baby-announcement>
-    </div>
-    <div class="babyCards">
-      <app-countdown units="Month | Weeks | Days"  end="January 1, 2019"></app-countdown>
-    </div>
-    <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
-      <div class="mat-elevation-z10 babyCards faqBlock" fxLayoutAlign="start end">
-        <h2>FAQs</h2>
-        <p>We'll update this section with common questions frequently!</p>
-        <mat-list>
-          <mat-list-item>1. Have you picked a name?</mat-list-item>
-          <mat-list-item class="indent">We have not! We hope to have a few favorites, but won't be naming him until we meet
-            him!</mat-list-item>
-          <mat-list-item>2. Do you have a nursery theme?</mat-list-item>
-          <mat-list-item class="indent">We do not! We are still in an apartment and will most likely be moving in the next year, so we did
-            not choose any themes! However, we are fans of elephants and the original Winnie The Pooh!</mat-list-item>
-        </mat-list>
-      </div>
-      <div class="mat-elevation-z10 babyCards">
-        <h1 class="center">Baby Announcement Mailing List</h1>
-        <p class="center">If you are interested in receiving an announcement when our son is born, please help us by adding your current address to our address book!</p>
-        <button mat-raised-button (click)="openMailingListDialog()" style="width: 100%; bottom: 0px;">Add My Address!</button>
-      </div>
-    </div>
-    <div class="mat-elevation-z10 babyCards" style="height: 400px; padding-bottom: 20px;">
-     <app-baby-slider></app-baby-slider>
+<div class="pageWrapper handlee">
+  <div class="babyCards black">
+    <h1 class="center handlee-large">Welcome!</h1>
+    <h2 class="center">Thanks for visiting our Baby website!</h2>
+    <div class="nunito">
+      <p>We’ve created this site as a way to share our excitement as we prepare to welcome our new famliy member! We
+        also wanted to give everyone a place to find fun facts and info about our baby showers and our registry. Take a
+        look around, and please feel free to reach out to us if you have any questions!
+        <p class="center">
+          Love,<br/> N&M
+
+         </p>
     </div>
   </div>
+  <div class="center mat-elevation-z10 babyCards scheme2a">
+    <app-baby-announcement></app-baby-announcement>
+    <app-countdown units="Month | Weeks | Days" end="January 1, 2019"></app-countdown>
+  </div>
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+    <div class="mat-elevation-z10 babyCards faqBlock scheme1b" fxLayoutAlign="start end">
+      <h1>FAQs</h1>
+      <p class="nunito">We'll update this section with common questions frequently!</p>
+      <ol class="nunito black">
+        <li class="">Have you picked a name?</li>
+        <p class="indent">We have not! We hope to have a few favorites, but won't be naming him until we
+          meet
+          him!</p>
+        <li>Do you have a nursery theme?</li>
+        <p class="indent">We do not! We are still in an apartment and will most likely be moving in the
+          next year, so we did not choose any themes! However, we are fans of elephants, the original Winnie The Pooh,
+          and anything nautical!</p>
+      </ol>
+    </div>
+    <div class="mat-elevation-z10 babyCards scheme1c" style="display: flex; flex-direction: column; justify-content: center;">
+        <h1 class="center">Baby Announcement Mailing List</h1>
+        <p class="center nunito">If you are interested in receiving an announcement when our son is born, please help
+          us by adding your current address to our address book!</p>
+        <button mat-raised-button (click)="openMailingListDialog()" style="width: 100%; bottom: 0px;">Add My Address!</button>
+    </div>
+  </div>
+  <div style="height: 400px; padding-bottom: 20px;">
+    <app-baby-slider></app-baby-slider>
+  </div>
+</div>

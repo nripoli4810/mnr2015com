@@ -16,38 +16,6 @@ body {
     margin-left: 5px;
 }
 
-.paleCornflowerBlue {
-    background-color: #A6CDF0;
-}
-
-.azureishWhite {
-    background-color: #CFDFF7;
-}
-
-.ghostWhite {
-    background-color: #F9F6FF;
-}
-
-.champagne {
-    background-color: #F3E5D2;
-}
-
-.oceanBoatBlue {
-    background-color: #0276c0;
-}
-
-.richElectricBlue {
-    background-color: #00a8d4;
-}
-
-.batteryChargedBlue {
-    background-color: #15b8db;
-}
-
-.classicRose {
-    background-color: #edd3ea;
-}
-
 .center {
     text-align: center
 }
@@ -56,24 +24,7 @@ body {
     margin-left: 40px;
 }
 
-.underline {
-    text-decoration: underline
-}
-
-.rightalign {
-    text-align: right
-}
-
-.cursor-pointer {
-    cursor: pointer;
-}
-
-.center {
-    text-align: center;
-}
-
 .babyCards {
-    background-color: #15b8db;
     color: white;
     padding: 5px 10px;
     margin-bottom: 20px;
@@ -84,4 +35,3 @@ body {
     margin-right: 10px;
     height: 100%;
 }
-
