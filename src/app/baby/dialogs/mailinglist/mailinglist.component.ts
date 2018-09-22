@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './mailinglist.component.html',
   styleUrls: ['./mailinglist.component.css']
 })
-export class MailinglistComponent implements OnInit {
+export class MailingListDialogComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
