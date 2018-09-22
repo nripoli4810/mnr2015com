@@ -8,7 +8,7 @@ export const MockShowers: Shower[] = [
         title: 'Canandaigua, NY',
         date: 'Saturday October 20',
         time: '2:00 PM',
-        content: ' Information will be updated as it becomes available! \ ',
+        content: ' Join us Saturday October 20th for food, games, and prizes in celebration of Baby Ripoli!! \ ',
         host: {
             firstName: 'Sarah',
             lastName: 'Wormer',
