@@ -1,22 +1,49 @@
 import { Injectable } from '@angular/core';
-import { BabyBook } from '../models/book';
-import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import { BabyBook } from '../models/book';
+import { MockBooks } from '../mock/mockBook';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookService {
+  urlBase = 'https://spreadsheets.google.com/feeds/list/'
+  urlAppend = '/public/values?alt=json'
 
-  private bookServiceUrl = 'https://script.google.com/macros/s/AKfycbzarbZQ7mG7PZUAA6cp2QyPcVZE6MGp5N2N2CyxIBCb7fmc7jds/exec';
+  private data: any = null
 
   constructor(private http: HttpClient) { }
 
-  AddBook(book: BabyBook) {
+  GetBooks(id, sheetNumber): Observable<BabyBook[]> {
+    var url = this.urlBase + id + '/' + sheetNumber + this.urlAppend;
+    let _headers = new HttpHeaders();
+    _headers.append("Access-Control-Allow-Origin", "*")
 
+    let babyBooks: BabyBook[] = [];
+    this.http.get(url, { headers: _headers, })
+      .subscribe(result => {
+        this.data = result['feed']['entry'];
+
+        if (this.data && this.data.length > 0) {
+          var obj = {};
+
+          this.data.forEach((entry, index) => {
+            for (let x in entry) {
+              obj[x.split('$')[1]] = entry[x]['$t'];
+            }
+
+            babyBooks.push(new BabyBook(obj['title'], obj['author']));
+          });
+        }
+        babyBooks.sort((a, b) => a.title.localeCompare(b.title));
+        console.log(babyBooks);
+      });
+
+    return of(babyBooks);
   }
 
-  // GetBooks(): Observable<BabyBook[]> {
-  //   // return
-  // }
+  GetMockBooks(): Observable<BabyBook[]> {
+    return of (MockBooks);
+  }
 }

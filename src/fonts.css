@@ -35,3 +35,8 @@
 .nunito {
     font-family: 'Nunito', sans-serif;
 }
+
+.nunito-med {
+    font-family: 'Nunito', sans-serif ;
+    font-size: 1.2em !important;
+}

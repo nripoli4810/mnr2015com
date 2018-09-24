@@ -1,5 +1,9 @@
 export class BabyBook {
     title: string;
     author: string;
-    ageRange: string;
+
+    constructor(title: string, author: string) {
+        this.title = title;
+        this.author = author;
+    }
 }

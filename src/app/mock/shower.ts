@@ -1,6 +1,4 @@
 import { Shower } from '../models/shower';
-import { ShowerHost } from '../models/host';
-import { PhysicalAddress } from '../models/physicalAddress';
 
 export const MockShowers: Shower[] = [
     {

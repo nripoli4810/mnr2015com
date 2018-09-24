@@ -3,7 +3,7 @@ import { CountdownComponent } from './countdown/countdown.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CallbackPipe } from './callback.pipe';
 import { CommonModule } from '@angular/common';
-
+import { BookFilterPipe } from './filter.pipe';
 
 @NgModule({
   imports: [CommonModule],
@@ -11,11 +11,13 @@ import { CommonModule } from '@angular/common';
     CountdownComponent,
     NotFoundComponent,
     CallbackPipe,
+    BookFilterPipe,
   ],
   exports: [
     CountdownComponent,
     NotFoundComponent,
     CallbackPipe,
+    BookFilterPipe,
   ]
 })
 export class SharedComponentsModule { }

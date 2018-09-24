@@ -1,10 +1,25 @@
 <div class="pageWrapper">
-  <div style="height: 50px;">
-    <button mat-button routerLink="/baby/shower"><mat-icon >chevron_left</mat-icon>Go Back</button>
-  </div>
-  <div style="min-height: 50px;">
-    <div #bookViewSpinner style="display: flex; justify-content: center;">
+  <!-- <div #bookViewSpinner style="display: flex; justify-content: center;">
       <mat-spinner diameter="64"></mat-spinner>
+    </div> -->
+  <div>
+    <div class="control">
+      <button mat-button routerLink="/baby/shower" class="marginTop15"><mat-icon >chevron_left</mat-icon>Go Back</button>
+      <mat-form-field class="marginTop15" ngStyle.gt-sm="{'width': 300}">
+        <input matInput [(ngModel)]="searchText" placeholder="Search" value="">
+      </mat-form-field>
+    </div>
+    <div class="books">
+      <mat-card *ngFor="let b of books | filter: searchText" class="bookCard">
+        <mat-card-content>
+          <p class="nunito-med">
+            {{b.title}}
+          </p>
+          <p class="nunito">
+            {{b.author}}
+          </p>
+        </mat-card-content>
+      </mat-card>
     </div>
   </div>
 </div>
