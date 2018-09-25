@@ -65,9 +65,11 @@ border: none !important;  }
     z-index: 1001;
     height: 60px !important;
     bottom: 0px;
-    font-size: 36px;
+    display: flex;
+    justify-content: center;
 }
 
 .description p {
-    margin: 0 auto;
+    /* margin: 0 auto;*/
+    margin-top: auto;
 }
