@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatGridListModule, MatListModule, MatButtonModule, MatExpansionModule,
-  MatTabsModule, MatDialogModule, MatInputModule, MatIconModule, MatSelectModule, MatRadioModule, MatFormFieldModule, MatProgressSpinnerModule, MatCardModule } from '@angular/material';
+  MatTabsModule, MatDialogModule, MatInputModule, MatIconModule, MatSelectModule,
+  MatRadioModule, MatFormFieldModule, MatProgressSpinnerModule, MatCardModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';

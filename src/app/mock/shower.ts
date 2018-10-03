@@ -47,7 +47,7 @@ export const MockShowers: Shower[] = [
         content: 'Information will be updated as it becomes available! \ ',
         host: {
             firstName: 'Becca',
-            lastName: 'Fyffe',
+            lastName: 'Sabol',
             contact: '',
             address: {
                 street1: 'tbd',
