@@ -18,7 +18,7 @@ export class BookService {
   GetBooks(id, sheetNumber): Observable<BabyBook[]> {
     var url = this.urlBase + id + '/' + sheetNumber + this.urlAppend;
     let _headers = new HttpHeaders();
-    _headers.append("Access-Control-Allow-Origin", "*")
+    _headers.append('Access-Control-Allow-Origin', "*")
 
     let babyBooks: BabyBook[] = [];
     this.http.get(url, { headers: _headers, })
@@ -29,7 +29,7 @@ export class BookService {
           var obj = {};
 
           this.data.forEach((entry, index) => {
-            for (let x in entry) {
+            for (const x in entry) {
               obj[x.split('$')[1]] = entry[x]['$t'];
             }
 
