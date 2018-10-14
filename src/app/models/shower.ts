@@ -1,10 +1,15 @@
-import { ShowerHost } from "./host";
-
 export class Shower {
-    id: number;
+    id: string;
     title: string;
     date: string;
-    time: string;
     content: string;
-    host: ShowerHost;
+    host: string;
+
+    constructor(id: string, title: string, date: string, content: string, host: string) {
+        this.id = id;
+        this.title = title;
+        this.date = date;
+        this.content = content;
+        this.host = host;
+    }
 }

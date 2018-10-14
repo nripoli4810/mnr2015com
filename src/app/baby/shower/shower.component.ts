@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Shower } from '../../models/shower';
-import { BabyService } from '../../services/baby.service';
 import { MatDialog } from '@angular/material';
 import { AddBookDialogComponent } from '../dialogs/add-book/add-book.component';
 import { RsvpDialogComponent } from '../dialogs/rsvp/rsvp.component';
+import { ShowerService } from '../../services/shower.service';
 
 @Component({
   selector: 'app-shower',
@@ -11,15 +11,17 @@ import { RsvpDialogComponent } from '../dialogs/rsvp/rsvp.component';
   styleUrls: ['./shower.component.css']
 })
 export class ShowerComponent implements OnInit {
-  mockShowers: Shower[];
+  private publicShowerId = '1B41D0edqWkfS_SyPwoTNIK9L83G1bixNQvXbimDXkzc';
+  showers: Shower[];
 
-  constructor(private babyService: BabyService,
-    public dialog: MatDialog) {
+  constructor(
+    public dialog: MatDialog,
+    private showerService: ShowerService) {
   }
 
   ngOnInit() {
-    this.babyService.GetShowerInformation()
-      .subscribe(showers => this.mockShowers = showers);
+    this.showerService.GetShowers(this.publicShowerId, 1)
+      .subscribe(showers => this.showers = showers);
   }
 
   openBookDialog() {

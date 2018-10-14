@@ -4,18 +4,18 @@
       <h3 class="center">Locations and Information</h3>
       <button mat-raised-button class="twentyFivePxMargin" (click)="showRSVPDialog()">RSVP here!</button>
     </div>
-    <mat-expansion-panel *ngFor="let s of mockShowers" class="handlee tenPxMargin">
+    <mat-expansion-panel *ngFor="let s of showers" class="handlee tenPxMargin">
       <mat-expansion-panel-header>
         <mat-panel-title class="handlee">
           {{s.title}}
         </mat-panel-title>
         <mat-panel-description>
-          <span>{{s.date}}, {{s.time}}</span>
+          <span>{{s.date}}</span>
         </mat-panel-description>
       </mat-expansion-panel-header>
       <div fxLayout="row" fxLayout.lt-md="column">
         <div style="min-width: 250px">
-          Host: {{s.host.firstName}} {{s.host.lastName}}
+          Host: {{s.host}}
           </div>
         <div ngStyle.lt-sm="margin-top: 10px;">
           {{s.content}}
