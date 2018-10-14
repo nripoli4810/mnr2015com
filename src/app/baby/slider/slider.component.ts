@@ -2,8 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { CarouselComponent } from 'angular2-carousel';
 import { NgStyle } from '@angular/common';
 import { delay } from 'q';
-import { MockSlides } from '../../mock/slides';
 import { Slide } from '../../models/slide';
+import { BabyGalleryService } from '../../services/baby-gallery.service';
 
 @Component({
   selector: 'app-baby-slider',
@@ -12,14 +12,24 @@ import { Slide } from '../../models/slide';
 })
 export class SliderComponent implements OnInit {
   public Slides: Slide[];
+  id = '1OHL1ScVaVr9_3mETljENkDRWDN3VhiIIGQkXxr5jjwA';
+  sheet = 1;
 
   @ViewChild('babyCarousel')
   babyCarousel: CarouselComponent;
 
-  constructor() {}
+  constructor(private babyGalleryService: BabyGalleryService) { }
 
   ngOnInit() {
-    this.Slides = MockSlides;
+    this.babyGalleryService.GetBabyGalleryPhotos(this.id, this.sheet)
+      .subscribe(slides => {
+        this.Slides = slides;
+        this.babyCarousel.carousel.items = ['<div class="item-carousel">http://mnr2015.com/assets/whiteShoes.jpg</div>',
+        'http://mnr2015.com/assets/whiteShoes.jpg', 'http://mnr2015.com/assets/whiteShoes.jpg'];
+
+        this.babyCarousel.update();
+      });
+
     this.babyCarousel.lockSlides = true;
   }
 

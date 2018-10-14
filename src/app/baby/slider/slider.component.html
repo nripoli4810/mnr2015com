@@ -1,4 +1,4 @@
-<carousel-component #babyCarousel [mode]="'horizontal'" [timeToSlide]="1000" [autoPlay]="true" [delayAutoPlay]="5000" (onReachEnd)="restart()">
+<!-- <carousel-component #babyCarousel [mode]="'horizontal'" [timeToSlide]="1000" [autoPlay]="true" [delayAutoPlay]="5000" (onReachEnd)="restart()">
   <div class="item-carousel">
     <div class="description">
       <p>First Ultrasound - "Gummy Bear" Phase!</p>
@@ -28,5 +28,18 @@
       <p>Marg starts "nesting" ;)</p>
     </div>
     <div style="background-image: url('../../../assets/babySlides/5.jpg'); position: absolute;"></div>
+  </div>
+</carousel-component> -->
+
+<carousel-component #babyCarousel [mode]="'horizontal'" [timeToSlide]="1000" [autoPlay]="true" [delayAutoPlay]="5000"
+  (onReachEnd)="restart()">
+  <div *ngFor="let slide of Slides">
+    <div class="item-carousel">
+      <div class="description">
+        <p>{{slide.description}}</p>
+      </div>
+      <div style="position: absolute;">
+      <img src="{{slide.src}}"></div>
+    </div>
   </div>
 </carousel-component>

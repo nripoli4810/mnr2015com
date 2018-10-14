@@ -16,20 +16,20 @@ export class BookService {
   constructor(private http: HttpClient) { }
 
   GetBooks(id, sheetNumber): Observable<BabyBook[]> {
-    var url = this.urlBase + id + '/' + sheetNumber + this.urlAppend;
-    let _headers = new HttpHeaders();
-    _headers.append("Access-Control-Allow-Origin", "*")
+    const url = this.urlBase + id + '/' + sheetNumber + this.urlAppend;
+    const _headers = new HttpHeaders();
+    _headers.append('Access-Control-Allow-Origin', '*');
 
-    let babyBooks: BabyBook[] = [];
+    const babyBooks: BabyBook[] = [];
     this.http.get(url, { headers: _headers, })
       .subscribe(result => {
         this.data = result['feed']['entry'];
 
         if (this.data && this.data.length > 0) {
-          var obj = {};
+          let obj = {};
 
           this.data.forEach((entry, index) => {
-            for (let x in entry) {
+            for (const x in entry) {
               obj[x.split('$')[1]] = entry[x]['$t'];
             }
 
@@ -37,7 +37,6 @@ export class BookService {
           });
         }
         babyBooks.sort((a, b) => a.title.localeCompare(b.title));
-        console.log(babyBooks);
       });
 
     return of(babyBooks);
