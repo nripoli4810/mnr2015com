@@ -27,3 +27,7 @@
     justify-content: space-between;
 }
 
+.addFab {
+    position: fixed !important;
+    right: 30px;
+}

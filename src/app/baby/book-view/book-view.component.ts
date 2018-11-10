@@ -1,7 +1,8 @@
 import { Component, OnInit, isDevMode } from '@angular/core';
 import { BookService } from '../../services/book.service';
-import { MatSpinner } from '@angular/material';
+import { MatSpinner, MatDialog } from '@angular/material';
 import { BabyBook } from '../../models/book';
+import { AddBookDialogComponent } from '../dialogs/add-book/add-book.component';
 
 @Component({
   selector: 'app-book-view',
@@ -14,7 +15,8 @@ export class BookViewComponent implements OnInit {
   books: BabyBook[];
   searchText: string;
 
-  constructor(private bookService: BookService) { }
+  constructor(private bookService: BookService,
+    public dialog: MatDialog) { }
 
   ngOnInit() {
     // if (isDevMode()) {
@@ -29,5 +31,9 @@ export class BookViewComponent implements OnInit {
           this.books = returnedBooks;
         });
     // }
+  }
+
+  openBookDialog() {
+    const d = this.dialog.open(AddBookDialogComponent, { minWidth: '280px', maxWidth: '640px',  autoFocus: false });
   }
 }
